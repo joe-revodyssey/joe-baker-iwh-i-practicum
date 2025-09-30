@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title Voyages
+  body
+    h1 Voyages
+    a(href='/update-cobj') Add to this table
+    if records.length
+      table(border='1')
+        thead
+          tr
+            th Voyage Name
+            th Captain
+            th Crew Count
+            th Home Port
+            th Vessel Name
+        tbody
+          each record in records
+            tr
+              td= record.properties.voyage_name
+              td= record.properties.captain
+              td= record.properties.crew_count
+              td= record.properties.home_port
+              td= record.properties.vessel_name
+    else
+      p No voyages found.

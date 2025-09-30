@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title= title
+  body
+    h1= title
+
+    form(action="/update-cobj" method="POST")
+      div
+        label(for="voyage_name") Voyage Name:
+        input(type="text" name="voyage_name" id="voyage_name" required)
+      div
+        label(for="captain") Captain:
+        input(type="text" name="captain" id="captain")
+      div
+        label(for="crew_count") Crew Count:
+        input(type="number" name="crew_count" id="crew_count")
+      div
+        label(for="home_port") Home Port:
+        input(type="text" name="home_port" id="home_port")
+      div
+        label(for="vessel_name") Vessel Name:
+        input(type="text" name="vessel_name" id="vessel_name")
+      div
+        button(type="submit") Add Voyage
+
+    br
+    a(href='/') Back to Homepage
